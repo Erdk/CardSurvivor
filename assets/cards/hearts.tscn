@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://edfuruyqt7bh"]
+
+[ext_resource type="Texture2D" uid="uid://cqyebcr236eld" path="res://assets/cards/hearts_a.png" id="1_fr2ht"]
+[ext_resource type="Script" uid="uid://bf55m55m1c2t5" path="res://assets/cards/cards.gd" id="1_l18mp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l18mp"]
+size = Vector2(40, 56)
+
+[node name="Hearts" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_l18mp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_l18mp")
+
+[node name="HeartsA" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_fr2ht")

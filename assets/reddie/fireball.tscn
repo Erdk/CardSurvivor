@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmnrwdpvl4jvl"]
+
+[ext_resource type="Script" uid="uid://frfiwkulefca" path="res://assets/reddie/fireball.gd" id="1_qug1c"]
+[ext_resource type="Texture2D" uid="uid://dgwo5elw57hgu" path="res://assets/reddie/fire_attac2.png" id="3_684ca"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qug1c"]
+radius = 19.2354
+
+[node name="Fireball" type="Area2D"]
+top_level = true
+collision_layer = 16
+collision_mask = 4
+script = ExtResource("1_qug1c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qug1c")
+
+[node name="FireAttac2" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("3_684ca")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

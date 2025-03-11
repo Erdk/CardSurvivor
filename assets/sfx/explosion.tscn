@@ -1,0 +1,51 @@
+[gd_scene load_steps=10 format=3 uid="uid://kyhw861xg80p"]
+
+[ext_resource type="Script" uid="uid://b0va6tteqdpbu" path="res://assets/sfx/explosion.gd" id="1_0pgxt"]
+[ext_resource type="Texture2D" uid="uid://capkrslgbymhl" path="res://assets_ansimuz/sprites/enemy-death/enemy-death-1.png" id="1_xi7gt"]
+[ext_resource type="Texture2D" uid="uid://5g81we78iiqc" path="res://assets_ansimuz/sprites/enemy-death/enemy-death-2.png" id="2_0pgxt"]
+[ext_resource type="Texture2D" uid="uid://ccxrxv2gac3o3" path="res://assets_ansimuz/sprites/enemy-death/enemy-death-3.png" id="3_7tnpr"]
+[ext_resource type="Texture2D" uid="uid://c8lefcln6vetu" path="res://assets_ansimuz/sprites/enemy-death/enemy-death-4.png" id="4_8f3k8"]
+[ext_resource type="Texture2D" uid="uid://c58fg4elmbk4r" path="res://assets_ansimuz/sprites/enemy-death/enemy-death-5.png" id="5_rvsh8"]
+[ext_resource type="Texture2D" uid="uid://4l2tp1o5ye7c" path="res://assets_ansimuz/sprites/enemy-death/enemy-death-6.png" id="6_iqv7f"]
+[ext_resource type="AudioStream" uid="uid://cbphicm8d7cej" path="res://assets/sounds/jsfx/pickupCoin.wav" id="8_7tnpr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jia5o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_xi7gt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_0pgxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7tnpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8f3k8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rvsh8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_iqv7f")
+}],
+"loop": false,
+"name": &"explode",
+"speed": 5.0
+}]
+
+[node name="Explosion" type="Node2D"]
+script = ExtResource("1_0pgxt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_jia5o")
+animation = &"explode"
+frame_progress = 0.372905
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("8_7tnpr")
+bus = &"SFX"

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://mf262bfb1xxd"]
+
+[ext_resource type="Texture2D" uid="uid://dclnnql4br07i" path="res://assets_ansimuz/environment/Props/pine.png" id="1_1s8l3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1s8l3"]
+radius = 38.0
+height = 198.0
+
+[node name="PineTree" type="StaticBody2D"]
+
+[node name="Pine" type="Sprite2D" parent="."]
+position = Vector2(-18, -260)
+scale = Vector2(4, 4)
+texture = ExtResource("1_1s8l3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -99)
+shape = SubResource("CapsuleShape2D_1s8l3")

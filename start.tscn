@@ -1,0 +1,148 @@
+[gd_scene load_steps=11 format=4 uid="uid://d17b6e3iphs1t"]
+
+[ext_resource type="Script" uid="uid://sy7fwy6dp4xi" path="res://start.gd" id="1_ots34"]
+[ext_resource type="TileSet" uid="uid://6xqglcddom5x" path="res://assets/survivors_game.tres" id="2_qn1rc"]
+[ext_resource type="PackedScene" uid="uid://caxli66t1uxqt" path="res://assets/reddie/reddie.tscn" id="3_1n0d2"]
+[ext_resource type="FontFile" uid="uid://df4gptd5xcdxq" path="res://assets_analogstudios/fonts/PixelOperator8.ttf" id="4_oiuna"]
+[ext_resource type="StyleBox" uid="uid://ce2a6v8f62iyf" path="res://assets/button_style.tres" id="4_y5hus"]
+[ext_resource type="StyleBox" uid="uid://u03tvol0xljb" path="res://assets/button_style_hover.tres" id="6_4a3qj"]
+[ext_resource type="AudioStream" uid="uid://bdp8to7hssv38" path="res://assets/music/1min-2021-10-19_-_Funny_Bit_-_www.FesliyanStudios.com.mp3" id="7_g38d0"]
+[ext_resource type="FontFile" uid="uid://b1xmaxv1u7rw2" path="res://assets_analogstudios/fonts/PixelOperator8-Bold.ttf" id="8_pob1m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qn1rc"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1n0d2"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 4)
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ots34")
+metadata/_edit_vertical_guides_ = [640.0]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+scale = Vector2(8, 8)
+tile_map_data = PackedByteArray("AAAAAAAAoQAHAAcAAAAAAAEAoQAEAAUAAAAAAAIAoQAHAAcAAAAAAAMAoQAEAAUAAAAAAAQAoQABAAEAAAAAAAUAoQAGAAUAAAAAAAYAoQABAAEAAAAAAAcAoQABAAEAAAAAAAgAoQABAAEAAAAAAAkAoQABAAEAAAAAAAoAoQAMAAcAAAABAAAAoQAEAAUAAAABAAEAoQAEAAUAAAABAAIAoQAEAAUAAAABAAMAoQABAAEAAAABAAQAoQABAAEAAAABAAUAoQAGAAUAAAABAAYAoQABAAEAAAABAAcAoQAEAAUAAAABAAgAoQABAAEAAAABAAkAoQABAAEAAAABAAoAoQAMAAcAAAACAAAAoQABAAEAAAACAAEAoQAHAAcAAAACAAIAoQABAAEAAAACAAMAoQABAAEAAAACAAQAoQAFAAUAAAACAAUAoQAFAAUAAAACAAYAoQABAAEAAAACAAcAoQABAAEAAAACAAgAoQABAAEAAAACAAkAoQABAAEAAAACAAoAoQAMAAcAAAADAAAAoQABAAEAAAADAAEAoQABAAEAAAADAAIAoQABAAEAAAADAAMAoQABAAEAAAADAAQAoQAGAAUAAAADAAUAoQABAAEAAAADAAYAoQAGAAUAAAADAAcAoQABAAEAAAADAAgAoQABAAEAAAADAAkAoQABAAEAAAADAAoAoQAMAAcAAAAEAAAAoQABAAEAAAAEAAEAoQAIAAcAAAAEAAIAoQABAAEAAAAEAAMAoQABAAEAAAAEAAQAoQABAAEAAAAEAAUAoQABAAEAAAAEAAYAoQABAAEAAAAEAAcAoQABAAEAAAAEAAgAoQABAAEAAAAEAAkAoQABAAEAAAAEAAoAoQAMAAcAAAAFAAAAoQABAAEAAAAFAAUAoQABAAEAAAAFAAYAoQABAAEAAAAFAAcAoQABAAEAAAAFAAgAoQABAAEAAAAFAAkAoQABAAEAAAAFAAoAoQAMAAcAAAAGAAAAoQABAAEAAAAGAAUAoQAIAAcAAAAGAAYAoQABAAEAAAAGAAcAoQABAAEAAAAGAAgAoQABAAEAAAAGAAkAoQABAAEAAAAGAAoAoQAMAAcAAAAHAAAAoQABAAEAAAAHAAUAoQABAAEAAAAHAAYAoQABAAEAAAAHAAcAoQABAAEAAAAHAAgAoQABAAEAAAAHAAkAoQABAAEAAAAHAAoAoQAMAAcAAAAIAAAAoQABAAEAAAAIAAEAoQABAAEAAAAIAAIAoQABAAEAAAAIAAMAoQABAAEAAAAIAAQAoQABAAEAAAAIAAUAoQABAAEAAAAIAAYAoQABAAEAAAAIAAcAoQABAAEAAAAIAAgAoQABAAEAAAAIAAkAoQABAAEAAAAIAAoAoQAMAAcAAAAJAAAAoQABAAEAAAAJAAEAoQABAAEAAAAJAAIAoQABAAEAAAAJAAMAoQABAAEAAAAJAAQAoQABAAEAAAAJAAUAoQABAAEAAAAJAAYAoQABAAEAAAAJAAcAoQABAAEAAAAJAAgAoQABAAEAAAAJAAkAoQABAAEAAAAJAAoAoQAMAAcAAAAKAAAAoQABAAEAAAAKAAIAoQABAAEAAAAKAAMAoQABAAEAAAAKAAQAoQABAAEAAAAKAAUAoQABAAEAAAAKAAYAoQABAAEAAAAKAAcAoQABAAEAAAAKAAgAoQABAAEAAAAKAAkAoQABAAEAAAAKAAoAoQAMAAcAAAALAAAAoQABAAEAAAALAAEAoQABAAEAAAALAAIAoQABAAEAAAALAAMAoQABAAEAAAALAAQAoQABAAEAAAALAAUAoQABAAEAAAALAAYAoQABAAEAAAALAAcAoQABAAEAAAALAAgAoQABAAEAAAALAAkAoQABAAEAAAALAAoAoQAMAAcAAAAMAAAAoQABAAEAAAAMAAEAoQABAAEAAAAMAAIAoQABAAEAAAAMAAMAoQABAAEAAAAMAAQAoQABAAEAAAAMAAUAoQABAAEAAAAMAAYAoQABAAEAAAAMAAcAoQABAAEAAAAMAAgAoQABAAEAAAAMAAkAoQABAAEAAAAMAAoAoQAMAAcAAAANAAAAoQABAAEAAAANAAEAoQABAAEAAAANAAQAoQABAAEAAAANAAUAoQABAAEAAAANAAcAoQABAAEAAAANAAgAoQAEAAUAAAANAAkAoQABAAEAAAANAAoAoQAMAAcAAAAOAAAAoQABAAEAAAAOAAIAoQAIAAcAAAAOAAUAoQABAAEAAAAOAAYAoQABAAEAAAAOAAcAoQABAAEAAAAOAAgAoQABAAEAAAAOAAkAoQABAAEAAAAOAAoAoQAMAAcAAAAPAAAAoQABAAEAAAAPAAEAoQAIAAcAAAAPAAIAoQABAAEAAAAPAAMAoQABAAEAAAAPAAQAoQABAAEAAAAPAAUAoQABAAEAAAAPAAYAoQABAAEAAAAPAAcAoQAEAAUAAAAPAAgAoQABAAEAAAAPAAkAoQABAAEAAAAPAAoAoQAMAAcAAAAQAAAAoQABAAEAAAAQAAEAoQABAAEAAAAQAAIAoQABAAEAAAAQAAMAoQAFAAUAAAAQAAQAoQABAAEAAAAQAAUAoQABAAEAAAAQAAYAoQAFAAUAAAAQAAcAoQABAAEAAAAQAAgAoQABAAEAAAAQAAkAoQAIAAgAAAAQAAoAoQAMAAcAAAARAAAAoQABAAEAAAARAAEAoQABAAEAAAARAAIAoQAFAAUAAAARAAMAoQAFAAUAAAARAAQAoQABAAEAAAARAAUAoQAFAAUAAAARAAcAoQABAAEAAAARAAgAoQABAAEAAAARAAkAoQABAAEAAAARAAoAoQAMAAcAAAASAAAAoQABAAEAAAASAAEAoQAFAAUAAAASAAIAoQAFAAUAAAASAAQAoQABAAEAAAASAAUAoQABAAEAAAASAAYAoQABAAEAAAASAAcAoQAPAAIAAAASAAgAoQAAAAAAAAASAAkAoQACAAIAAAASAAoAoQAMAAcAAAATAAAAoQAFAAUAAAATAAEAoQABAAEAAAATAAIAoQAFAAUAAAATAAMAoQABAAEAAAATAAQAoQABAAEAAAATAAUAoQABAAEAAAATAAYAoQABAAEAAAATAAcAoQABAAEAAAATAAgAoQADAAAAAAATAAkAoQADAAIAAAATAAoAoQAMAAcAAAARAAYAoQABAAEAAAANAAYAoQAJAAcAAAAFAAMAoQABAAEAAAAFAAQAoQABAAEAAAAGAAEAoQABAAEAAAAGAAIAoQABAAEAAAAGAAMAoQAJAAcAAAAGAAQAoQABAAEAAAAHAAIAoQABAAEAAAAHAAMAoQABAAEAAAAHAAQAoQABAAEAAAASAAMAoQABAAEAAAAOAAQAoQABAAEAAAANAAMAoQAJAAcAAAANAAIAoQABAAEAAAAOAAMAoQABAAEAAAAOAAEAoQABAAEAAAAKAAEAoQABAAEAAAAFAAEAoQABAAEAAAAFAAIAoQAIAAcAAAAHAAEAoQABAAEAAAA=")
+tile_set = ExtResource("2_qn1rc")
+
+[node name="Reddie" parent="." instance=ExtResource("3_1n0d2")]
+unique_name_in_owner = true
+position = Vector2(230, 602)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -165.0
+offset_top = -17.0
+offset_right = 166.0
+offset_bottom = 147.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 1, 0.2, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_oiuna")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = ExtResource("6_4a3qj")
+theme_override_styles/normal = ExtResource("4_y5hus")
+text = "START"
+
+[node name="SettingButton" type="Button" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 1, 0.2, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_oiuna")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = ExtResource("6_4a3qj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qn1rc")
+text = "SETTINGS"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_hover_color = Color(0, 1, 0.2, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_oiuna")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/hover = ExtResource("6_4a3qj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1n0d2")
+text = "QUIT"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_g38d0")
+autoplay = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -282.0
+offset_top = 76.0
+offset_right = 282.0
+offset_bottom = 123.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("8_pob1m")
+theme_override_font_sizes/font_size = 46
+text = "Card Survivor"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 358.0
+offset_top = 170.0
+offset_right = 922.0
+offset_bottom = 217.0
+theme_override_fonts/font = ExtResource("8_pob1m")
+theme_override_font_sizes/font_size = 22
+text = "by mr.erdk"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 14.0
+offset_right = 1190.0
+offset_bottom = 61.0
+theme_override_fonts/font = ExtResource("4_oiuna")
+theme_override_font_sizes/font_size = 22
+text = "You need a house, but you're broke... your only choice is..."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="ready" from="Reddie" to="." method="_on_reddie_ready"]
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/SettingButton" to="." method="_on_setting_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

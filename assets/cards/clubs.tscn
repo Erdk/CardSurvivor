@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bh808wo5d1c5h"]
+
+[ext_resource type="Script" uid="uid://bf55m55m1c2t5" path="res://assets/cards/cards.gd" id="1_mww5a"]
+[ext_resource type="Texture2D" uid="uid://bm15k4uqmmel5" path="res://assets/cards/clubs_a.png" id="1_t8teo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5vua1"]
+size = Vector2(40, 56)
+
+[node name="Clubs" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_mww5a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5vua1")
+
+[node name="ClubsA" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_t8teo")

@@ -1,0 +1,3 @@
+Demo assets: CC by 4.0- "CC-By 4.0 - GDQuest and contributors - https://www.gdquest.com/"
+
+Demo code: MIT - "Copyright 2023 GDQuest" + MIT license text from opensource.org/license/mit/
