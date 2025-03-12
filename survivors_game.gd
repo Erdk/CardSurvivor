@@ -1,16 +1,16 @@
 extends Node2D
 
 
-var game_paused = false
+var game_paused_state = false
 var end = false
 
 func _on_player_hes_dead_jimmy():
-	pause_all(true, "Next time buster!\n\nSomething something\nquitting before scoring big!")
+	pause_all(true, "99.99% quit before scoring big!\n\nSo one more round, buddy!")
 	end = true
 
 
 func _on_enemies_mortage_paid():
-	pause_all(true, "You won\n\nYou've got your house!")
+	pause_all(true, "You've won!\n\nEnjoy your house! (I guess...)")
 	end = true
 	
 
@@ -24,8 +24,8 @@ func pause_all(game_paused, text):
 	
 func _process(delta):
 	if !end && Input.is_action_just_pressed("pause"):
-		game_paused = !game_paused
-		pause_all(game_paused, "Pause")
+		game_paused_state = !game_paused_state
+		pause_all(game_paused_state, "Pause")
 	
 	if Input.is_action_pressed("main_menu"):
 		get_tree().paused = false
