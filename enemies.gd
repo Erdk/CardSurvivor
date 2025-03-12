@@ -76,7 +76,7 @@ func _on_interest_rate_timeout():
 		%InterestRate.text = ""
 	
 	if rate_countdown > RATE_COUNDDOWN_FINISH / 2:
-		%InterestRate.text = "New rate in: " + str(RATE_COUNDDOWN_FINISH - rate_countdown)
+		%InterestRate.text = "New installment in: " + str(RATE_COUNDDOWN_FINISH - rate_countdown)
 	if rate_countdown == RATE_COUNDDOWN_FINISH:
 		rate_countdown = 0
 		var interest = int(float(mortage_to_pay) * 0.05 / (30.0 * 12.0))
